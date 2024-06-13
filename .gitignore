@@ -1,0 +1,11 @@
+# node file
+node_modules/
+
+# vs code setting
+.vscode/
+
+# dist
+dist/
+
+# zip
+.zip

@@ -1,0 +1,46 @@
+// color
+$color: (
+);
+
+// font-family
+$mainFont: 'Noto Sans JP', "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+$englishFont: 'Montserrat', sans-serif;
+$mixedFont: 'Montserrat', 'Noto Sans JP', "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+
+// inner
+$xl-inner: 900px;
+$l-inner: 800px;
+$m-inner: 780px;
+$s-inner: 550px;
+$inner-sp: 750px;
+
+// padding
+$padding: 20px;
+$padding-sp: 16px;
+
+// breakpoint
+$breakpoints : (
+  //PCファーストのキー値
+  's': '(width <= 575.98px)',
+  'm': ' (width <= 767.98px)',
+  'l': '(width <= 991.98px)',
+  'xl': '(width <= #{$m-inner - 0.02px})',
+  'xxl': '(width <= 1399.98px)',
+  //SPファーストのキー値
+  // "xxl":"screen and (width >= 1400px)",
+  // "xl":"screen and (width >= #{$l-inner})",
+  // "l":"screen and (width >= 992px)",
+  // "m":"screen and (width >= 768px)",
+  // "s":"screen and (width >= 576px)",
+);
+
+// transition time
+$ts-time: 0.3s;
+
+// z-index
+$z-map : (loading: 10000,
+  header: 1000,
+  sidebar: 100,
+  base: 1,
+  under: -1,
+);
