@@ -28,6 +28,5 @@
   $slope: math.div(($maxPxSize - $minPxSize) * 1px, ($maxWidth - $minWidth));
   $yAxisIntersection: rem((-1 * $minWidth * $slope + $minPxSize));
   $slope_vw: $slope * 100 * 1vw;
-  @return clamp(($minFontSize * 1rem), #{$yAxisIntersection} + #{$slope_vw}, ($maxFontSize * 1rem));
-  // @return clamp(rem($minFontSize), ($yAxisIntersection) unquote("+") ($slope_vw), rem($maxFontSize));
+  @return clamp(#{$minFontSize * 1rem}, #{$yAxisIntersection} + #{$slope_vw}, #{$maxFontSize * 1rem});
 }

@@ -36,6 +36,8 @@
   --break-s: 576px;
 }
 
+$inner: 1280px;
+
 // breakpoint
 $breakpoints : (
   "xxl":"screen and (width >= 1400px)",
