@@ -1,0 +1,47 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.l-menu {
+  display: grid;
+  height: inherit;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  grid-template-columns: repeat(2,1fr);
+  color: var(--color-text2);
+  box-shadow: 0px -1px 2px -1px rgba(0, 0, 0, 0.4);
+
+  @include mq(){
+    position: static;
+    grid-template-columns: repeat(2,auto);
+    box-shadow: none;
+  }
+}
+
+.l-menu__btn {
+}
+
+.l-menu__link {
+  transition: opacity var(--ease-time) var(--ease-type) 0s;
+  display: block;
+  padding-block: rem(20.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &[data-menu-color="price"]{
+    background-color: rgb(49, 153, 223);
+  }
+  &[data-menu-color="reserve"]{
+    background-color: rgb(182, 208, 28)
+  }
+  @include hover(){
+    opacity: 0.8;
+  }
+  
+  @include mq(){
+    padding: rem(14.4) rem(32.4);
+  }
+}

@@ -9,6 +9,7 @@ const browserSync = require("browser-sync"); //ブラウザリロード
 const autoprefixer = require("gulp-autoprefixer"); //ベンダープレフィックス自動付与
 const postcss = require("gulp-postcss"); //css-mqpackerを使用
 const mqpacker = require("css-mqpacker"); //メディアクエリをまとめる
+const cssDeclarationSorter = require("css-declaration-sorter"); //cssプロパティをソート
 const bulkSass = require("gulp-sass-glob-use-forward");
 
 // 画像圧縮
@@ -19,6 +20,11 @@ const pngQuant = require("imagemin-pngquant");
 
 // webp変換
 const webp = require("gulp-webp"); //gulp-webpでwebp変換
+
+// webpackを使用
+const webpackStream = require("webpack-stream");
+const webpack = require("webpack");
+const webpackConfig = require("./webpack.config");
 
 // 入出力するフォルダを指定
 const srcBase = "./_src";
@@ -66,27 +72,34 @@ const cssSass = (done) => {
       //エラーが出ても処理を止めない
       plumber({
         errorHandler: notify.onError("Error:<%= error.message %>"),
-      })
+      }),
     )
     .pipe(bulkSass())
     .pipe(
       sass({
         outputStyle: "expanded",
-      })
+      }),
     ) //指定できるキー expanded compressed
     .pipe(autoprefixer(TARGET_BROWSERS))
+    .pipe(
+      postcss([
+        cssDeclarationSorter({
+          order: "alphabetical",
+        }),
+      ]),
+    ) //プロパティをアルファベット順にソート
     .pipe(postcss([mqpacker()])) // メディアクエリをまとめる
     .pipe(
       gulp.dest(distPath.css, {
         sourcemaps: "./",
-      })
+      }),
     ) //コンパイル先
     .pipe(browserSync.stream())
     .pipe(
       notify({
         message: "Sassをコンパイルしました！",
         onLast: true,
-      })
+      }),
     );
   done();
 };
@@ -94,8 +107,13 @@ const cssSass = (done) => {
 /**
  * js
  */
-const js = (done) => {
-  gulp.src(srcPath.js).pipe(gulp.dest(distPath.js));
+const bundleJs = (done) => {
+  webpackStream(webpackConfig, webpack)
+    .on("error", function (e) {
+      console.error(e);
+      this.emit("end");
+    })
+    .pipe(gulp.dest(distPath.js));
   done();
 };
 
@@ -118,7 +136,7 @@ const image = (done) => {
         imageMin.svgo(),
         imageMin.optipng(),
         imageMin.gifsicle({ optimizationLevel: 3 }),
-      ])
+      ]),
     )
     .pipe(webp())
     .pipe(gulp.dest(distPath.img));
@@ -134,12 +152,25 @@ const php = (done) => {
 };
 
 /**
+ * ローカルサーバー立ち上げ
+ */
+const browserSyncFunc = () => {
+  // browserSync.init(browserSyncOption);
+};
+
+const browserSyncOption = {
+  proxy: "http://localhost:10028",
+};
+
+
+/**
  * リロード
  */
 const browserSyncReload = (done) => {
   browserSync.reload();
   done();
 };
+
 
 /**
  *
@@ -150,7 +181,7 @@ const browserSyncReload = (done) => {
 const watchFiles = () => {
   gulp.watch(srcPath.php, gulp.series(php, browserSyncReload));
   gulp.watch(srcPath.scss, gulp.series(cssSass, browserSyncReload));
-  gulp.watch(srcPath.js, gulp.series(js, browserSyncReload));
+  gulp.watch(srcPath.js, gulp.series(bundleJs, browserSyncReload));
   gulp.watch(srcPath.img, gulp.series(image, browserSyncReload));
 };
 
@@ -162,6 +193,6 @@ const watchFiles = () => {
  */
 exports.default = gulp.series(
   clean,
-  gulp.parallel(php, cssSass, js, image),
-  gulp.parallel(watchFiles)
+  gulp.parallel(php,cssSass, bundleJs, image),
+  gulp.parallel(watchFiles, browserSyncFunc),
 );

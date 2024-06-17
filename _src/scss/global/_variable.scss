@@ -1,41 +1,49 @@
-// color
-$color: (
-);
+// css変数
+:root {
+  // color
+  --color-main:#004986;
+  --color-text: #05161A;
+  --color-text2: #fff;
+  --color-text3: #006492;
+  --color-accent: #e8412e;
 
-// font-family
-$mainFont: 'Noto Sans JP', "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-$englishFont: 'Montserrat', sans-serif;
-$mixedFont: 'Montserrat', 'Noto Sans JP', "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  // font-family
+  --ff-main: "Zen Kaku Gothic Antique", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 
-// inner
-$xl-inner: 900px;
-$l-inner: 800px;
-$m-inner: 780px;
-$s-inner: 550px;
-$inner-sp: 750px;
+  // layout
+  --inner-s: 37.5rem;      //600px
+  --inner-l: 60rem;        //960px
+  --inner-xl: 80rem;       //1280px
 
-// padding
-$padding: 20px;
-$padding-sp: 16px;
+  // padding
+  --padding-s: 0.9375rem;
+  --padding: 1rem;
+
+  // header height
+  --header-pc: 4.375rem;
+  --header-sp: 3.875rem;
+
+  // ease-time
+  --ease-time: 0.3s;
+  // ease-type
+  --ease-type: ease;
+
+  // breakpoint
+  --break-xxl: 1400px;
+  --break-xl: var(--inner-xl);
+  --break-l: 992px;
+  --break-m: 767px;
+  --break-s: 576px;
+}
 
 // breakpoint
 $breakpoints : (
-  //PCファーストのキー値
-  's': '(width <= 575.98px)',
-  'm': ' (width <= 767.98px)',
-  'l': '(width <= 991.98px)',
-  'xl': '(width <= #{$m-inner - 0.02px})',
-  'xxl': '(width <= 1399.98px)',
-  //SPファーストのキー値
-  // "xxl":"screen and (width >= 1400px)",
-  // "xl":"screen and (width >= #{$l-inner})",
-  // "l":"screen and (width >= 992px)",
-  // "m":"screen and (width >= 768px)",
-  // "s":"screen and (width >= 576px)",
+  "xxl":"screen and (width >= 1400px)",
+  "xl":"screen and (width >= var(--inner-xl))",
+  "l":"screen and (width >= 992px)",
+  "m":"screen and (width >= 768px)",
+  "s":"screen and (width >= 576px)",
 );
-
-// transition time
-$ts-time: 0.3s;
 
 // z-index
 $z-map : (loading: 10000,
