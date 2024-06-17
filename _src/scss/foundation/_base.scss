@@ -2,11 +2,21 @@
 
 html{
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-sp);
+  
+  @include mq(){
+    scroll-padding-top: var(--header-pc);
+  }
 }
 
 body{
   font-family: var(--ff-main);
   color: var(--color-text);
+  padding-top: var(--header-sp);
+  
+  @include mq(){
+    padding-top: var(--header-pc);
+  }
 }
 
 summary {

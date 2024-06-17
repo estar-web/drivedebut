@@ -1,0 +1,71 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-fv {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 375 /200;
+  background: transparent url(../images/mv-sp.webp) no-repeat center center / cover;
+
+  @include mq(){
+    background-image: url(../images/mv.webp);
+    height: rem(500);
+    aspect-ratio: auto;
+  }
+}
+
+.p-fv__inner {
+  height: inherit;
+  position: relative;
+  padding-inline: 1rem;
+  width: min(100%,rem(960));
+  margin-inline: auto;
+}
+
+.p-fv__contents {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  right: 1rem;
+}
+
+.p-fv__lead {
+  color: var(--color-text2);
+  display: flex;
+  flex-direction: column;
+  gap: rem(18);
+  @include fz_clamp(1.125, 3);
+
+  @include mq(){
+    gap: rem(10);
+  }
+}
+
+.p-fv__lead--1st {
+  display: block;
+  background-color: #5c6869;
+  width: fit-content;
+  margin-left: rem(-10);
+  padding-left: rem(9);
+  line-height: 1;
+
+  @include mq(){
+    margin-left: -2rem;
+    padding-left: 1rem;
+  }
+}
+
+.p-fv__lead--2nd {
+  display: block;
+  background-color: #336f80;
+  width: fit-content;
+  padding-right: rem(9);
+  padding-left: rem(9);
+  line-height: 1;
+
+  @include mq(){
+    padding-left: 1rem;
+    padding-right: 2rem;
+  }
+}
