@@ -2,7 +2,7 @@
 @use "./function" as fn;
 
 // メディアクエリ
-@mixin mq($breakpoint: s){
+@mixin mq($breakpoint: m){
   @media #{map-get(var.$breakpoints,$breakpoint)}{
     @content;
   }

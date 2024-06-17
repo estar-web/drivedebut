@@ -1,4 +1,4 @@
-import { globalFunc } from "./script";
+import { globalFunc } from "./global";
 // import { scrollFunc } from "./scroll";
 // import { splideFunc } from "./splide";
 

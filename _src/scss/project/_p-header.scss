@@ -1,0 +1,22 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-header{
+  height: var(--header-sp);
+  
+  @include mq(){
+    height: var(--header-pc);
+  }
+}
+
+.p-header__inner{
+  padding-top: rem(5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mq(){
+    padding-block: rem(10);
+  }
+}

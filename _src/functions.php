@@ -80,14 +80,6 @@
 
 
 /**
- * 投稿画像サイズ設定
- *
- * @codex https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/add_image_size
- */
-// add_image_size('$name', $width, $height, true);
-
-
-/**
  * 抜粋機能の有効化
  *
  * @codex https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/add_post_type_support
@@ -105,6 +97,18 @@ function my_delete_local_files(){
   wp_deregister_script('jquery');
 }
 add_action('wp_enqueue_scripts', 'my_delete_local_files');
+
+
+/**
+ * Google Fontの読み込み
+ *
+ * @codex https://wpdocs.osdn.jp/%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC
+ */
+function my_font(){
+  //style.css 読み込み
+  wp_enqueue_style('font', 'https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap', array(), '1.0.0', 'all');
+}
+add_action( 'wp_enqueue_scripts', 'my_font' );
 
 
 /**
