@@ -3,9 +3,14 @@
 @use "sass:map";
 
 .p-introFeature {
-  margin-top: rem(20);
   border: 3px solid #fcee00;
   padding: 1.25rem;
+  width: min(720px,100%);
+  margin-inline: auto;
+  
+  @include mq(){
+    margin-top: rem(40);
+  }
 }
 
 .p-introFeature__list {
@@ -41,4 +46,8 @@
   font-size: rem(10);
   color: var(--color-text3);
   text-align: right;
+
+  @include mq(){
+    font-size: 0.875rem;
+  }
 }

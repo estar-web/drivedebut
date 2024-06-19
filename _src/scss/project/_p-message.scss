@@ -3,8 +3,7 @@
 @use "sass:map";
 
 .p-message {
-  margin-top: 1.25rem;
-  background: transparent url(../images/bg-intro.webp) no-repeat center center / cover;
+  background: transparent url(../images/bg-message.webp) no-repeat center center / cover;
   padding: 1.25rem rem(10) rem(60) rem(10);
   position: relative;
 
@@ -17,6 +16,10 @@
     inset: 0;
     z-index: map.get($z-map,base) - 1;
   }
+
+  @include mq(){
+    padding: rem(40) rem(40) rem(150) rem(40);
+  }
 }
 
 .p-message__contents{
@@ -25,21 +28,36 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  margin-inline: auto;
+
+  @include mq(){
+    flex-direction: row;
+    gap: rem(40);
+  }
 }
 
 .p-message__img {
-  max-width: 100%;
+  width: min(100%,368px);
   overflow: hidden;
   border-radius: 3.8% / 5%;
+  margin-inline: auto;
+  aspect-ratio: 355 / 266;
 }
 
 .p-message__body {
   color: #001167;
+  @include mq(){
+    width: calc(100% - rem(368) - rem(40));
+  }
 }
 
 .p-message__text {
   font-size: 1rem;
   line-height: math.div(25.6,16);
+
+  @include mq(){
+    font-size: rem(22);
+  }
 }
 
 .p-message__text--marker{

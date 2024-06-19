@@ -20,8 +20,8 @@
   </div>
   <section class="p-intro">
     <div class="l-inner">
-      <h2 class="c-title">「運転」があなたの生活の一部になります</h2>
       <div class="p-intro__contents p-contents">
+        <h2 class="c-title">「運転」があなたの生活の一部になります</h2>
         <div class="p-introFeature">
           <ul class="p-introFeature__list">
             <li class="p-introFeature__item">インストラクターは<span class="p-introFeature__item--accent">約20年</span>教習指導員をしていた教習のエキスパート！</li>
@@ -31,44 +31,48 @@
           </ul>
           <p class="p-introFeature__attention">※初回は教習車での教習になります。</p>
         </div>
-        <div class="p-introVoice">
-          <ul class="p-introVoice__list">
-            <?php
-            $voice_item = [
-              [
-                "img" => "picture-intro1.webp",
-                "text" => "生活道路での運転ができるようになり、娘の幼稚園の送り迎えが楽になりました！<br>
-            今までは自転車だったので時間はかかるし雨だと大変でしたが、今ではそのストレスが減りました！<br>
-            また、家族で外食したときに夫がお酒を飲めるようになりました。",
-              ],
-              [
-                "img" => "picture-intro2.webp",
-                "text" => "キャンプが趣味なんですが、荷物の量を気にしなくてよくなったし、途中に温泉やお土産屋さんに寄り道できるようになりました！<br>
-            また、駅から遠いお店にも行けるようになりました。<br>
-            今度は夜の都心や横浜あたりをひとりでドライブしてみたいです！<br>
-            それから友達や家族を乗せて温泉旅行もしてみたい！",
-              ],
-            ];
-            // while ($loop < 3) {
-            foreach ($voice_item as $item) {
-            ?>
-              <li class="p-introVoice__item">
-                <p class="p-introVoice__label">VOICE</p>
-                <figure class="p-introVoice__img">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $item["img"]; ?>" alt="アイコン：女性のイラスト" width="150" height="150" loading="lazy" decoding="async">
-                </figure>
-                <p class="p-introVoice__text">
-                  <?php echo $item["text"]; ?>
-                </p>
-              </li>
-            <?php } ?>
-          </ul>
-        </div>
       </div>
     </div>
   </section>
-  <div class="p-message">
-    <div class="p-message__contents">
+  <section class="p-voice">
+    <div class="l-inner p-voice__inner">
+      <div class="p-voice__contents p-contents">
+        <ul class="p-voice__list">
+          <?php
+          $voice_item = [
+            [
+              "img" => "picture-intro1.webp",
+              "text" => "生活道路での運転ができるようになり、娘の幼稚園の送り迎えが楽になりました！<br>
+                今までは自転車だったので時間はかかるし雨だと大変でしたが、今ではそのストレスが減りました！<br>
+                また、家族で外食したときに夫がお酒を飲めるようになりました。",
+            ],
+            [
+              "img" => "picture-intro2.webp",
+              "text" => "キャンプが趣味なんですが、荷物の量を気にしなくてよくなったし、途中に温泉やお土産屋さんに寄り道できるようになりました！<br>
+                また、駅から遠いお店にも行けるようになりました。<br>
+                今度は夜の都心や横浜あたりをひとりでドライブしてみたいです！<br>
+                それから友達や家族を乗せて温泉旅行もしてみたい！",
+            ],
+          ];
+          // while ($loop < 3) {
+          foreach ($voice_item as $item) {
+          ?>
+            <li class="p-voice__item">
+              <p class="p-voice__label">VOICE</p>
+              <figure class="p-voice__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $item["img"]; ?>" alt="アイコン：女性のイラスト" width="150" height="150" loading="lazy" decoding="async">
+              </figure>
+              <p class="p-voice__text">
+                <?php echo $item["text"]; ?>
+              </p>
+            </li>
+          <?php } ?>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="p-message">
+    <div class="p-message__contents p-contents">
       <figure class="p-message__img">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-message.webp" alt="写真：教習の様子" width="368" height="276" loading="lazy" decoding="async">
       </figure>
@@ -84,6 +88,6 @@
         </p>
       </div>
     </div>
-  </div>
+  </section>
 </main>
 <?php get_footer(); ?>
