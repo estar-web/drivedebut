@@ -1,0 +1,53 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-introFeature {
+  border: 3px solid #fcee00;
+  padding: 1.25rem;
+  width: min(720px,100%);
+  margin-inline: auto;
+  
+  @include mq(){
+    margin-top: rem(40);
+  }
+}
+
+.p-introFeature__list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(11.2);
+}
+
+.p-introFeature__item {
+  font-size: 1.125rem;
+  line-height: math.div(28.8, 18);
+  padding-left: rem(35);
+  color: var(--color-main);
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    background: transparent url(../images/icon-check.svg) no-repeat center center / cover;
+    width: rem(25);
+    aspect-ratio: 1;
+    left: 0;
+    top: 0;
+  }
+}
+
+.p-introFeature__item--accent {
+  text-decoration: underline;
+}
+
+.p-introFeature__attention {
+  margin-top: rem(11.2);
+  font-size: rem(10);
+  color: var(--color-text3);
+  text-align: right;
+
+  @include mq(){
+    font-size: 0.875rem;
+  }
+}

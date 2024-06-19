@@ -13,7 +13,7 @@ body{
   font-family: var(--ff-main);
   color: var(--color-text);
   padding-top: var(--header-sp);
-  
+  background-color: #fbfbfb;
   @include mq(){
     padding-top: var(--header-pc);
   }

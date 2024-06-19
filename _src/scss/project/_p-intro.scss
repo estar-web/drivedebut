@@ -1,0 +1,18 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-intro {
+  margin-top: 1.25rem;
+  padding-block: rem(20);
+
+  @include mq(){
+    padding-block: rem(40);
+  }
+}
+
+.p-intro__contents {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 0;
+}
