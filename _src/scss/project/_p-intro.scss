@@ -1,0 +1,15 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-intro {
+  margin-top: 1.25rem;
+}
+
+.p-intro__contents {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.25rem;
+  padding-inline: 0;
+}

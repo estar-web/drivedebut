@@ -1,0 +1,52 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-message {
+  margin-top: 1.25rem;
+  background: transparent url(../images/bg-intro.webp) no-repeat center center / cover;
+  padding: 1.25rem rem(10) rem(60) rem(10);
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    inset: 0;
+    z-index: map.get($z-map,base) - 1;
+  }
+}
+
+.p-message__contents{
+  position: relative;
+  z-index: map.get($z-map,base);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.p-message__img {
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 3.8% / 5%;
+}
+
+.p-message__body {
+  color: #001167;
+}
+
+.p-message__text {
+  font-size: 1rem;
+  line-height: math.div(25.6,16);
+}
+
+.p-message__text--marker{
+  background-color: #f7c90f;
+  line-height: 1;
+}
+
+.p-message__text--accent{
+  color: var(--color-accent);
+}

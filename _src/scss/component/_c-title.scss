@@ -1,0 +1,22 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.c-title{
+  position: relative;
+  padding: 0.675rem 1.25rem;
+  background-color: var(--color-balloon);
+  color: var(--color-text3);
+  @include fz_clamp(1.25, 1.75);
+
+  &:after{
+    content: "";
+    position: absolute;
+    bottom: -1.25rem;
+    left: rem(30);
+    width: 0;
+    height: 0;
+    border: rem(10) solid transparent;
+    border-top: rem(15) solid var(--color-balloon);
+  }
+}
