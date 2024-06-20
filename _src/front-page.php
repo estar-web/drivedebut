@@ -37,8 +37,8 @@
   <section class="p-intro">
     <div class="l-inner">
       <div class="p-intro__contents p-contents">
-        <h2 class="c-title">「運転」があなたの生活の一部になります</h2>
-        <div class="p-introFeature">
+        <h2 class="c-title js-in-view fade-in-up">「運転」があなたの生活の一部になります</h2>
+        <div class="p-introFeature js-in-view fade-in-up">
           <ul class="p-introFeature__list">
             <li class="p-introFeature__item">インストラクターは<span class="p-introFeature__item--accent">約20年</span>教習指導員をしていた教習のエキスパート！</li>
             <li class="p-introFeature__item">初回教習4,500円！不安がある方も気軽に練習を始められます。</li>
@@ -50,7 +50,7 @@
       </div>
     </div>
   </section>
-  <section class="p-voice">
+  <section class="p-voice js-in-view fade-in-up">
     <div class="l-inner p-voice__inner">
       <div class="p-voice__contents p-contents">
         <ul class="p-voice__list">
@@ -87,7 +87,7 @@
       </div>
     </div>
   </section>
-  <section class="p-message">
+  <section class="p-message js-in-view fade-in-up">
     <div class="p-message__contents p-contents">
       <figure class="p-message__img">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-message.webp" alt="写真：教習の様子" width="368" height="276" loading="lazy" decoding="async">

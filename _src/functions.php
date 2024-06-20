@@ -1,83 +1,4 @@
 <?php
-/**
- * Functions
- */
-
-/**
- * WordPress標準機能
- *
- * @codex https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/add_theme_support
- */
-// function my_setup(){
-// // アイキャッチ画像を有効化
-// add_theme_support('post-thumbnails');
-// // 投稿とコメントのRSSフィードのリンクを有効化
-// add_theme_support('automatic-feed-links');
-// // タイトルタグ自動生成
-// add_theme_support('title-tag');
-// //HTML5でマークアップ
-// add_theme_support(
-//   'html5',
-//     array(
-//       'search-form',
-//       'comment-form',
-//       'comment-list',
-//       'gallery',
-//       'caption',
-//     )
-//   );
-// }
-// add_action('after_setup_theme', 'my_setup');
-
-
-/**
- * wp_head内不要な出力の削除
- *
- * @codex https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/remove_action
- */
-// バージョン表記削除
-// remove_action('wp_head', 'wp_generator');
-// canonical情報削除
-// remove_action('wp_head', 'rel_canonical');
-// Shortlink削除
-// remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
-// RSSフィードのURLの削除
-// remove_action('wp_head', 'feed_links', 2);
-// remove_action('wp_head', 'feed_links_extra', 3);
-// 前の記事、次の記事のリンク削除
-// remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
-// DNS Prefetchingの削除
-// remove_action('wp_head', 'wp_resource_hints', 2); //読み込み速度簡易高速化停止
-
-// 外部ブログツールからの投稿を受け入れ削除
-// remove_action('wp_head', 'rsd_link'); //EditURI削除
-// remove_action('wp_head', 'wlwmanifest_link'); //wlwmanifest削除
-
-// Embed機能の停止
-// remove_action('wp_head', 'rest_output_link_wp_head'); //REST APIのURL表示
-// remove_action('wp_head', 'wp_oembed_add_discovery_links'); //外部コンテンツの埋め込み
-// remove_action('wp_head', 'wp_oembed_add_host_js'); //外部コンテンツの埋め込み
-
-// 絵文字利用の削除
-// remove_action('wp_head', 'print_emoji_detection_script', 7);
-// remove_action('admin_print_scripts', 'print_emoji_detection_script');
-// remove_action('wp_print_styles', 'print_emoji_styles' );
-// remove_action('admin_print_styles', 'print_emoji_styles', 10);
-
-// Global Stylesのコード削除
-// remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
-// remove_action('wp_body_open', 'wp_global_styles_render_svg_filters');
-
-// 最近のコメントウィジェット削除
-// function remove_wp_widget_recent_comments_style(){
-// 	global $wp_widget_factory;
-// 	remove_action('wp_head', array(
-// 		$wp_widget_factory->widgets['WP_Widget_Recent_Comments'],
-// 		'recent_comments_style'
-// 	));
-// }
-// add_action('widgets_init', 'remove_wp_widget_recent_comments_style');
-
 
 /**
  * 抜粋機能の有効化
@@ -124,13 +45,26 @@ add_action( 'wp_enqueue_scripts', 'my_styles' );
 
 
 /**
+ * jQueryの読み込み
+ *
+ * @codex https://wpdocs.osdn.jp/%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC
+ */
+function jquery()
+{
+  //CDN 読み込み
+  wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), '3.7.1', true);
+}
+add_action('wp_enqueue_scripts', 'jquery');
+
+
+/**
  * JavaScriptの読み込み
  *
  * @codex https://wpdocs.osdn.jp/%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC
  */
 function my_scripts() {
   //script.js 読み込み
-  wp_enqueue_script('my', get_template_directory_uri().'/assets/js/script.js', array(), '1.0.0', true);
+  wp_enqueue_script('my', get_template_directory_uri().'/assets/js/bundle.js', array(), '1.0.0', true);
 }
 add_action( 'wp_enqueue_scripts', 'my_scripts' );
 

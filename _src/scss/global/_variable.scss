@@ -29,6 +29,10 @@
   // ease-type
   --ease-type: ease;
 
+  //scroll
+  --scroll-time: 0.8s;
+  --scroll-type: ease-out;
+
   // breakpoint
   --break-xxl: 1400px;
   --break-xl: var(--inner-xl);
