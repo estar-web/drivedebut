@@ -1,0 +1,14 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.fade-in-up{
+  opacity: 0;
+  transform: translateY(rem(100));
+  transition: opacity var(--scroll-time) var(--scroll-type) 0s,transform var(--scroll-time) var(--scroll-type) 0s;
+
+  &.is-in-view{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
