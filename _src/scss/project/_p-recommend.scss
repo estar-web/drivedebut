@@ -1,0 +1,122 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-recommend {
+  padding-block: rem(20);
+
+  @include mq() {
+    padding-block: rem(40);
+  }
+}
+
+.p-recommend__inner {}
+
+.p-recommend__title {
+  color: var(--color-text3);
+  @include fz_clamp(1.125, 2.25);
+  position: relative;
+  width: min(100%, rem(940));
+  margin-inline: auto;
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    content: "";
+    width: 100%;
+    height: 10px;
+    background-color: #fcee00;
+    -webkit-transform: rotate(-0.3deg);
+    -ms-transform: rotate(-0.3deg);
+    transform: rotate(-0.3deg);
+  }
+}
+
+.p-recommend__contents {
+  margin-top: rem(60);
+  padding-inline: 0;
+
+  @include mq() {
+    padding-inline: rem(10);
+    margin-top: rem(120);
+  }
+}
+
+.p-recommend__lead {
+  color: #000;
+  font-size: 1.5rem;
+  text-align: center;
+  position: relative;
+  width: fit-content;
+  margin-inline: auto;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    width: rem(2);
+    height: 120%;
+    background-color: #000;
+    transform-origin: center;
+  }
+
+  &::before {
+    rotate: -25deg;
+    left: get_vw(-25);
+  }
+  
+  &::after {
+    right: get_vw(-25);
+    rotate: 25deg;
+  }
+  @include mq(){
+    &::before{
+      left: rem(-30);
+    }
+    &::after{
+      right: rem(-30);
+    }
+  }
+}
+
+.p-recommend__list {
+  margin-top: rem(25);
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: flex-start;
+  gap: rem(8);
+
+  @include mq() {
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr 1fr;
+    gap: rem(40) rem(20);
+    margin-top: rem(60);
+  }
+}
+
+.p-recommend__item {
+  padding-left: rem(35);
+  font-size: 0.875rem;
+  color: var(--color-main);
+  position: relative;
+  line-height: math.div(22.4, 14);
+
+  &:after {
+    content: "";
+    position: absolute;
+    background: transparent url(../images/icon-check.svg) no-repeat center center / cover;
+    width: rem(25);
+    aspect-ratio: 1;
+    left: 0;
+    top: 0;
+  }
+
+  @include mq() {
+    font-size: 1.125rem;
+  }
+}

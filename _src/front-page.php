@@ -18,6 +18,22 @@
       <h2 class="p-banner__head"><span class="p-banner__head--strong">ドライブデビュー</span>&emsp;Drive Debut</h2>
     </div>
   </div>
+  <section class="p-recommend">
+    <div class="p-recommend__inner l-inner">
+      <h2 class="p-recommend__title">運転ビギナー＆ペーパードライバーのための教習所</h2>
+      <div class="p-recommend__contents p-contents">
+        <h3 class="p-recommend__lead">こんな方にオススメです</h3>
+        <ul class="p-recommend__list">
+          <li class="p-recommend__item">いきなり車を運転するのはこわい。<br>だから親にとなりに乗ってもらったけどケンカになっちゃった！</li>
+          <li class="p-recommend__item">子どもをつれて自転車や電車って大変！<br>でももう何年も運転していないし･･･どうしよう？</li>
+          <li class="p-recommend__item">買い物しすぎた～！<br>レンタカーやカーシェアが使えればいいんだろうけど、どうやって借りるの？？</li>
+          <li class="p-recommend__item">旅行ではいつも友達の運転に頼ってばかり。<br>申し訳ないと思いつつも自分で運転する自信がない･･･</li>
+          <li class="p-recommend__item">就職が決まった♪<br>でも面接で「車の運転があるからね～」って･･･<br>教習所以来運転してないけど大丈夫かな･･･</li>
+          <li class="p-recommend__item">もし運転中トラブルがあったらどうしよう？<br>パンクしたら？あおり運転にあったら？<br>誰に相談すればいい･･･？</li>
+        </ul>
+      </div>
+    </div>
+  </section>
   <section class="p-intro">
     <div class="l-inner">
       <div class="p-intro__contents p-contents">
