@@ -1,0 +1,34 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-price {
+  padding-block: rem(60);
+}
+
+.p-price__inner {
+}
+
+.p-price__title {
+}
+
+.p-price__title--accent {
+  color: var(--color-accent);
+}
+
+.p-price__contents {
+}
+
+.p-price__desc {
+}
+
+.p-price__lead {
+}
+
+.p-price_list {
+}
+
+.p-price__item {
+}
+
+

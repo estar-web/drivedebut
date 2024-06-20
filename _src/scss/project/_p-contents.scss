@@ -5,5 +5,8 @@
 .p-contents{
   width: min(rem(960),100%);
   margin-inline: auto;
-  padding-inline: 1rem;
+
+  @include mq(){
+    padding-inline: rem(10);    
+  }
 }
