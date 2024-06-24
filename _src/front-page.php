@@ -107,22 +107,38 @@
   </section>
   <section class="p-price js-in-view fade-in-up">
     <div class="p-price__inner l-inner">
-      <h2 class="p-price__title c-title">初回教習&nbsp<span class="p-price__title--accent">4,500円！</span></h2>
+      <h2 class="p-price__title c-title js-in-view fade-in-up">初回教習&nbsp<span class="p-price__title--accent">4,500円！</span></h2>
       <div class="p-price__contents p-contents">
-        <div class="p-price__desc">
-          <h3 class="p-price__lead">お試し価格&emsp;<span class="p-price__title--accent">4,500円</span>&nbsp<span class="p-price__title--small">（税込）</h3>
+        <div class="p-price__desc js-in-view fade-in-up">
+          <h3 class="p-price__lead">お試し価格&emsp;<span class="p-price__lead--accent">4,500円</span>&nbsp<span class="p-price__title--small">（税込）</h3>
           <ul class="p-price_list">
-            <li class="p-price__item">初回教習は1.5時間。東武東上線鶴ヶ島駅で待ち合わせ。</li>
+            <li class="p-price__item">初回教習は<span class="p-price__item--accent">1.5時間</span>。東武東上線<span class="p-price__item--accent">鶴ヶ島駅</span>で待ち合わせ。</li>
             <li class="p-price__item">待ち合わせ時刻は　①9:00～②11:00～③13:00～④15:00～⑤17:00～</li>
             <li class="p-price__item">教習車で自動車の装置の説明を受けてから、いざ運転！</li>
             <li class="p-price__item">お一人一回限り。</li>
           </ul>
         </div>
-        <div class="p-pricePay">
+        <div class="p-pricePay js-in-view fade-in-up">
           <h4 class="p-pricePay__head">各種クレジットカード等が使えます。</h4>
           <figure class="p-pricePay__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-credit.webp" alt="画像：支払い方法一覧" width="940" height="142" loading="lazy" decoding="async">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-price.webp" alt="画像：支払い方法一覧" width="940" height="142" loading="lazy" decoding="async">
           </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="p-flow">
+    <div class="l-inner p-flow__inner">
+      <h2 class="p-flow__title">教習の流れ</h2>
+      <div class="p-flow__contents">
+        <p class="p-flow__time">
+          <span class="p-flow__time--label">初回教習（1.5時間）</span>①9:00～ ②11:00～ ③13:00～ ④15:00～ ⑤17:00～
+        </p>
+        <div class="p-flow__wrap">
+          <div class="p-flow__item">
+            <p class="p-flow__step">STEP 1</p>
+            <h3 class="p-flow__head">東武東上線　鶴ヶ島駅で待ち合わせ</h3>
+          </div>
         </div>
       </div>
     </div>
