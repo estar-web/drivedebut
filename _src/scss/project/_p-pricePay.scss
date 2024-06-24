@@ -3,14 +3,24 @@
 @use "sass:map";
 
 .p-pricePay {
+  margin-top: rem(40);
 
+  @include mq(){
+    margin-top: rem(80);
+  }
 }
 
 .p-pricePay__head {
+  text-align: center;
+  color: var(--color-text3);
+  font-size: 0.875rem;
 
+  @include mq(){
+    font-size: 1.25rem;
+  }
 }
 
 .p-pricePay__img {
-
+  margin-top: 1.25rem;
 }
 

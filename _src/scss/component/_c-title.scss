@@ -8,6 +8,7 @@
   background-color: var(--color-balloon);
   color: var(--color-text3);
   @include fz_clamp(1.25, 1.75);
+  font-weight: 700;
 
   &:after{
     content: "";
@@ -18,5 +19,9 @@
     height: 0;
     border: rem(10) solid transparent;
     border-top: rem(15) solid var(--color-balloon);
+  }
+
+  @include mq(){
+    padding: rem(14) rem(28);
   }
 }
