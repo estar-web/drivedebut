@@ -1,0 +1,81 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-flowBenefit {
+  margin-top: rem(60);
+  position: relative;
+  border-radius: 20px;
+  border: 3px solid #fcee00;
+  color: var(--color-text3);
+  padding: rem(50) rem(20) rem(20);
+}
+
+.p-flowBenefit__head {
+  position: absolute;
+  top: rem(-40);
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.p-flowBenefit__head--sub {
+  background-color: #fcee00;
+  border-radius: 50%;
+  width: rem(90);
+  aspect-ratio: 1;
+  position: relative;
+  display: grid;
+  place-items: center;
+  font-size: 0.875rem;
+
+  &:after {
+    content: "";
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: dashed 2px #fff;
+    border-radius: 50%;
+  }
+}
+
+.p-Benefit__head--main {
+  background-color: #fcee00;
+  font-size: 1.125rem;
+  margin: 0;
+  padding-left: rem(10);
+  line-height: math.div(30, 18);
+  padding-block: rem(4);
+  white-space: nowrap;
+  margin-left: rem(-5);
+
+  span {
+    border-top: dashed 2px #fff;
+    border-bottom: dashed 2px #fff;
+  }
+}
+
+.p-flowBenefit__text {
+  line-height: math.div(25.6,16);
+
+  @include mq(){
+    font-size: 1.25rem;
+  }
+}
+
+.p-flowBenefit__attention {
+  margin-top: rem(20);
+  text-align: center;
+  font-size: rem(11);
+  line-height: math.div(22.4,11);
+
+  @include mq(){
+    font-size: 0.875rem;
+  }
+}
