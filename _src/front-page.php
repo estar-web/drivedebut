@@ -129,16 +129,120 @@
   </section>
   <section class="p-flow">
     <div class="l-inner p-flow__inner">
-      <h2 class="p-flow__title">教習の流れ</h2>
+      <h2 class="p-flow__title js-in-view fade-in-up"><span>教習の流れ</span></h2>
       <div class="p-flow__contents">
-        <p class="p-flow__time">
+        <video class="p-flow__movie" src="<?php echo get_template_directory_uri(); ?>/assets/images/movie-flow.mp4" controls width="600" height="400"></video>
+        <p class="p-flow__time js-in-view fade-in-up">
           <span class="p-flow__time--label">初回教習（1.5時間）</span>①9:00～ ②11:00～ ③13:00～ ④15:00～ ⑤17:00～
         </p>
-        <div class="p-flow__wrap">
-          <div class="p-flow__item">
-            <p class="p-flow__step">STEP 1</p>
-            <h3 class="p-flow__head">東武東上線　鶴ヶ島駅で待ち合わせ</h3>
-          </div>
+        <div class="p-flow__wrap js-in-view fade-in-up">
+          <?php
+          $flow_items = [
+            [
+              'head' => '東武東上線　鶴ヶ島駅で待ち合わせ',
+              'img' => 'picture-flow1.webp',
+              'text' => '&emsp;待ち合わせ時間は9:00、11:00、13:00、15:00、17:00から選びご予約下さい。<br><br>&emsp;東武東上線鶴ヶ島駅改札出口でお待ちしております。目印は黄色の名札です。'
+            ],
+            [
+              'head' => 'いよいよ教習スタート！',
+              'img' => 'picture-flow2.webp',
+              'text' => '&emsp;初回は教習車での講習です。<br><br>&emsp;東武東上線鶴ヶ島駅改札出口でお待ちしております。目印は黄色の名札です。'
+            ],
+            [
+              'head' => '次回に向けてカウンセリング',
+              'img' => 'picture-flow3.webp',
+              'text' => '&emsp;おひとりおひとり運転の目的は違うもの。<br>&emsp;そしてどんな練習が必要かも人それぞれ。<br><br>&emsp;お客様のお話から適切な教習のゴールやプランをご提案いたします。<br><br>&emsp;もちろん「自信がついた！」ということであれば初回教習のみでもOK。嬉しい限りです。'
+            ],
+          ];
+          $step = 1;
+          foreach ($flow_items as $item) :
+          ?>
+            <div class="p-flow__item">
+              <hgroup class="p-flow__head">
+                <p class="p-flow__step">STEP <?php echo $step; ?></p>
+                <h3 class="p-flow__lead"><?php echo $item['head']; ?></h3>
+              </hgroup>
+              <figure class="p-flow__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $item['img']; ?>" alt="写真：インストラクターの写真" width="214" height="160" loading="lazy" decoding="async">
+              </figure>
+              <div class="p-flow__body">
+                <p class="p-flow__text">
+                  <?php echo $item['text']; ?>
+                </p>
+              </div>
+            </div>
+          <?php
+            $step++;
+          endforeach;
+          ?>
+        </div>
+
+        <p class="p-flow__time js-in-view fade-in-up">
+          <span class="p-flow__time--label">２回目以降</span>
+        </p>
+        <div class="p-flow__wrap js-in-view fade-in-up">
+          <?php
+          $flow_items = [
+            [
+              'head' => 'インストラクターと待ち合わせ',
+              'img' => 'picture-flow4.webp',
+              'text' => '&emsp;　「出張教習コース」の場合はインストラクターがお客様のご自宅などご希望の場所に伺います。<br><br>&emsp;「鶴ヶ島駅発教習車コース」の場合は東武東上線鶴ヶ島駅で待ち合わせです。'
+            ],
+            [
+              'head' => 'さあ、教習スタート！',
+              'img' => 'picture-flow5.webp',
+              'text' => '&emsp;初回教習時のカウンセリングの際に決定したプランをもとに教習を行います。<br><br>&emsp;駐車の練習や高速教習、ガソリンの入れ方など教習内容はさまざまなことができます。'
+            ],
+            [
+              'head' => 'お疲れ様でした',
+              'img' => 'picture-flow6.webp',
+              'text' => '&emsp;きっとあなたは運転に自信がついているはず。<br><br>&emsp;運転の怖さが楽しさに変わっているのでは？'
+            ],
+          ];
+          $step = 1;
+          foreach ($flow_items as $item) :
+          ?>
+            <div class="p-flow__item">
+              <hgroup class="p-flow__head">
+                <p class="p-flow__step">STEP <?php echo $step; ?></p>
+                <h3 class="p-flow__lead"><?php echo $item['head']; ?></h3>
+              </hgroup>
+              <figure class="p-flow__img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $item['img']; ?>" alt="写真：インストラクターの写真" width="214" height="160" loading="lazy" decoding="async">
+              </figure>
+              <div class="p-flow__body">
+                <p class="p-flow__text">
+                  <?php echo $item['text']; ?>
+                </p>
+              </div>
+            </div>
+          <?php
+            $step++;
+          endforeach;
+          ?>
+        </div>
+        <div class="p-flow__map js-in-view fade-in-up">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3230.4099652787604!2d139.4211490772867!3d35.93693987250597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018d7168086c603%3A0xb04638166d5063e6!2z6ba044O25bO26aeF!5e0!3m2!1sja!2sjp!4v1719241799872!5m2!1sja!2sjp" width="355" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="p-flowBenefit js-in-view fade-in-up">
+          <h3 class="p-flowBenefit__head">
+            <p class="p-flowBenefit__head--sub">お客様特典</p>
+            <p class="p-Benefit__head--main"><span>困ったときのアフターフォロー</span></p>
+          </h3>
+          <p class="p-flowBenefit__text">
+            &emsp;教習を終えておひとりで運転していると色々疑問やお困りごとがでてくるのではないでしょうか。<br>
+            <br>
+            &emsp;「レンタカーやカーシェアリングってどうやって利用するの？」<br>
+            &emsp;「車検って何が必要なの？」などなど。<br>
+            <br>
+            &emsp;そんなときはお気軽にLINEで質問や相談してください。<br>
+            <br>
+            &emsp;できる限りアドバイスいたします。<br>
+          </p>
+          <p class="p-flowBenefit__attention">
+            ※問題の解決を補償するものではありません。<br>
+            ※事故など緊急の際はまず救急と警察にご連絡を。
+          </p>
         </div>
       </div>
     </div>
