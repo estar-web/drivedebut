@@ -247,5 +247,58 @@
       </div>
     </div>
   </section>
+  <section class="p-customer">
+    <div class="l-inner p-customer__inner">
+      <h2 class="p-customer__title c-title js-in-view fade-in-up">お客様の声</h2>
+      <div class="p-customer__wrapper">
+        <figure class="p-customer__img js-in-view fade-in-up">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer1.webp" alt="写真：お客様1" width="940" height="705" loading="lazy" decoding="async">
+        </figure>
+        <figure class="p-customer__img js-in-view fade-in-up">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer2.webp" alt="写真：お客様2" width="940" height="705" loading="lazy" decoding="async">
+        </figure>
+        <figure class="p-customer__img js-in-view fade-in-up">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer3.webp" alt="写真：お客様3" width="940" height="705" loading="lazy" decoding="async">
+        </figure>
+        <figure class="p-customer__img js-in-view fade-in-up">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer4.webp" alt="写真：お客様4" width="940" height="705" loading="lazy" decoding="async">
+        </figure>
+      </div>
+      <div class="p-customer__letters js-in-view fade-in-up">
+        <figure class="p-customer__letter">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer5.webp" alt="写真：お客様5" width="427" height="240" loading="lazy" decoding="async">
+        </figure>
+        <figure class="p-customer__letter">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer6.webp" alt="写真：お客様6" width="427" height="240" loading="lazy" decoding="async">
+        </figure>
+        <figure class="p-customer__letter">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer7.webp" alt="写真：お客様7" width="427" height="240" loading="lazy" decoding="async">
+        </figure>
+      </div>
+      <div class="p-customerOrigin js-in-view fade-in-up">
+        <h2 class="p-customerOrigin__head">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/deco-customer.webp" alt="アイコン：地球" width="25" height="25" loading="lazy" decoding="async">
+          <p>おかげさまでたくさんのお客様にご利用いただいています</p>
+        </h2>
+        <div class="p-customerOrigin__body">
+          <div class="p-customerOrigin__item">
+            <p class="p-customerOrigin__territory">埼玉県</p>
+            <p class="p-customerOrigin__city">鶴ヶ島市・川越市・所沢市・春日部市・新座市・川口市・和光市・朝霞市・坂戸市・東松山市・ふじみ野市・さいたま市</p>
+          </div>
+          <div class="p-customerOrigin__item">
+            <p class="p-customerOrigin__territory">東京都</p>
+            <p class="p-customerOrigin__city">世田谷区・目黒区・板橋区・荒川区・江東区・豊島区・千代田区・江戸川区・北区・台東区・文京区・墨田区・中央区・新宿区・渋谷区・中野区・足立区・東久留米市・多摩市・西東京市・八王子市</p>
+          </div>
+          <div class="p-customerOrigin__item">
+            <p class="p-customerOrigin__territory">神奈川県</p>
+            <p class="p-customerOrigin__city">川崎市</p>
+          </div>
+          <p class="p-customerOrigin__appeal">
+            <span class="p-customerOrigin__appeal--strong">20代～70代</span>のお客様にお越しいただいています！
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 <?php get_footer(); ?>

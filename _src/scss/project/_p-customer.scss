@@ -1,0 +1,43 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-customer {
+  margin-top: 5rem;
+}
+
+.p-customer__inner {
+  padding-inline: 0;
+  max-width: 100%;
+}
+
+.p-customer__title {
+  width: min(100%, calc(rem(940) + 1rem * 2));
+  margin-inline: auto;
+}
+
+.p-customer__wrapper {
+  width: min(100%, calc(rem(940) + 1rem * 2));
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding-inline: var(--padding-s);
+  margin-inline: auto;
+}
+
+.p-customer__img {
+  border-radius: 3.8% / 5%;
+  overflow: hidden;
+  aspect-ratio: 355 / 269;
+}
+
+.p-customer__letters {
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+}
+
+.p-customer__letter {}

@@ -1,7 +1,7 @@
 import { scrollFunc } from "./scroll";
 import { globalFunc } from "./global";
-// import { splideFunc } from "./splide";
+import { windowFunc } from "./window";
 
 scrollFunc();
 globalFunc();
-// splideFunc();
+windowFunc();
