@@ -281,18 +281,30 @@
           <p>おかげさまでたくさんのお客様にご利用いただいています</p>
         </h2>
         <div class="p-customerOrigin__body">
-          <div class="p-customerOrigin__item">
-            <p class="p-customerOrigin__territory">埼玉県</p>
-            <p class="p-customerOrigin__city">鶴ヶ島市・川越市・所沢市・春日部市・新座市・川口市・和光市・朝霞市・坂戸市・東松山市・ふじみ野市・さいたま市</p>
-          </div>
-          <div class="p-customerOrigin__item">
-            <p class="p-customerOrigin__territory">東京都</p>
-            <p class="p-customerOrigin__city">世田谷区・目黒区・板橋区・荒川区・江東区・豊島区・千代田区・江戸川区・北区・台東区・文京区・墨田区・中央区・新宿区・渋谷区・中野区・足立区・東久留米市・多摩市・西東京市・八王子市</p>
-          </div>
-          <div class="p-customerOrigin__item">
-            <p class="p-customerOrigin__territory">神奈川県</p>
-            <p class="p-customerOrigin__city">川崎市</p>
-          </div>
+          <?php $fields = CFS()->get('origin');
+          foreach ($fields as $field) :
+          ?>
+            <div class="p-customerOrigin__item">
+              <p class="p-customerOrigin__territory"><?php echo $field['territory'] ?></p>
+              <p class="p-customerOrigin__city">
+                <?php
+                $cities = $field['city_group'];
+                if ($cities) {
+                  $first = true;
+                  foreach ($field['city_group'] as $city) {
+                    if ($first) {
+                      echo $city['city'];
+                      $first = false;
+                    } else {
+                      echo '・' . $city['city'];
+                    }
+                  }
+                }
+                ?>
+                <!-- 鶴ヶ島市・川越市・所沢市・春日部市・新座市・川口市・和光市・朝霞市・坂戸市・東松山市・ふじみ野市・さいたま市 -->
+              </p>
+            </div>
+          <?php endforeach; ?>
           <p class="p-customerOrigin__appeal">
             <span class="p-customerOrigin__appeal--strong">20代～70代</span>のお客様にお越しいただいています！
           </p>
