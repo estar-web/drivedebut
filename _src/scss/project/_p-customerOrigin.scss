@@ -1,0 +1,83 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+
+.p-customerOrigin {
+  margin-top: 1.25rem;
+  padding-inline: var(--padding-s);
+  width: min(100%, calc(rem(700) + 1rem * 2));
+  margin-inline: auto;
+
+  @include mq(){
+    margin-top: 2.5rem;
+  }
+}
+
+.p-customerOrigin__head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background-color: #FCEE00;
+  font-size: 1.25rem;
+  color: var(--color-text3);
+  gap: 0.5rem;
+  font-weight: 700;
+
+  img{
+    width: rem(25);
+    aspect-ratio: 1;
+    display: block;
+  }
+  p{
+    width: calc(100% - rem(25) - 0.5rem);
+  }
+}
+
+.p-customerOrigin__body {
+  background-color: #fffcc9;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.p-customerOrigin__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.p-customerOrigin__territory {
+  font-size: 0.875rem;
+  color: #4d4d4d;
+  
+  @include mq(){
+    font-size: 1.25rem;
+  }
+}
+
+.p-customerOrigin__city {
+  text-align: center;
+  color: var(--color-main);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.p-customerOrigin__appeal {
+  margin-top: 2.5rem;
+  color: var(--color-main);
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: math.div(44.8,28);
+}
+
+.p-customerOrigin__appeal--strong {
+  background-color: #ffe169;
+  color: var(--color-accent);
+  font-size: 1.75rem;
+}
