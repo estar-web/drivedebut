@@ -1,0 +1,37 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-instructorMessage {
+  margin-top: rem(70);
+  border-color: #fff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3), 0 0 6px rgba(128, 128, 128, 0.1);
+  padding: 1.25rem;
+  width: min(rem(700),100%);
+  margin-inline: auto;
+
+  @include mq(){
+    padding: 2.5rem;
+  }
+}
+
+.p-instructorMessage__img {
+  width: rem(158);
+  aspect-ratio: 158 /77;
+  margin-inline: auto;
+
+  @include mq(){
+    width: rem(290);
+  }
+}
+
+.p-instructorMessage__body {
+  margin-top: rem(50);
+}
+
+.p-instructorMessage__text {
+  color: var(--color-main);
+  font-style: italic;
+  font-size: 0.875rem;
+  line-height: math.div(22.4,14);
+}
