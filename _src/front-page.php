@@ -301,13 +301,60 @@
                   }
                 }
                 ?>
-                <!-- 鶴ヶ島市・川越市・所沢市・春日部市・新座市・川口市・和光市・朝霞市・坂戸市・東松山市・ふじみ野市・さいたま市 -->
               </p>
             </div>
           <?php endforeach; ?>
           <p class="p-customerOrigin__appeal">
             <span class="p-customerOrigin__appeal--strong">20代～70代</span>のお客様にお越しいただいています！
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="p-instructor">
+    <div class="l-inner p-instructor__inner">
+      <h2 class="p-instructor__title c-title js-in-view fade-in-up">インストラクター紹介</h2>
+      <div class="p-instructor__contents js-in-view fade-in-up">
+        <p class="p-instructor__name">伊東&nbsp;孝&emsp;<span class="p-instructor__name--eg">Ito Takashi</span></p>
+        <figure class="p-instructor__img">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-instructor.webp" alt="写真：伊東孝" width="700" height="700" loading="lazy" decoding="async">
+        </figure>
+        <p class="p-instructor__desc">
+          &emsp;埼玉県の自動車教習所で約20年勤める。すべての教習と技能検定の資格を取得。また、カウンセラーの資格も持ち教習生に寄り添った教習を行っていた。資格といえばなぜか整体師、"ほめる達人検定２級"といった資格も持っている。趣味はクライミング、愛犬と遊ぶことなど。
+        </p>
+        <a href="https://www.instagram.com/drivedebut/" class="p-instructor__link">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-instagram.webp" alt="アイコン：Instagram" width="40" height="40" loading="lazy" decoding="async">
+        </a>
+        <div class="p-instructorMessage js-in-view fade-in-up">
+          <figure class="p-instructorMessage__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/deco-flower.webp" alt="画像：花" width="290" height="140" loading="lazy" decoding="async">
+          </figure>
+          <div class="p-instructorMessage__body">
+            <p class="p-instructorMessage__text">&emsp;まずは免許取得おめでとうございます。<br>
+              <br>
+              初めて免許証を受け取ったとき、「これで車の運転ができる！」って嬉しかったですよね。<br>
+              <br>
+              &emsp;でも同時に「自分ひとりで運転して大丈夫かな･･･？」という不安もあったのではないでしょうか。<br>
+              <br>
+              &emsp;まずは近場で練習！と思っても、<br>
+              <br>
+              &emsp;「もしぶつけてしまったら･･･。万が一事故にでもなったらどうしよう･･･」<br>
+              <br>
+              &emsp;なかなか一歩が踏み出せない。<br>
+              <br>
+              &emsp;かくいう私は免許を取って初めて運転したとき、発進し始めて１００メートルでぶつけてしまいました。<br>
+              <br>
+              &emsp;車も心もヘコみました（笑）<br>
+              <br>
+              <br>
+              このサイトを見てくださっているあなたにはそんな思いはして欲しくない。<br>
+              <br>
+              &emsp;そんな想いから、あなたがゆとりある安全運転ができるように、そして私がそのサポートができるようにこのサービスをつくりました。<br>
+              <br>
+              <br>
+              「運転を、あなたの日常に」、生活の一部にできるようにお手伝いさせて下さい。
+            </p>
+          </div>
         </div>
       </div>
     </div>
