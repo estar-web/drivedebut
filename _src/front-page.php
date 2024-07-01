@@ -264,17 +264,19 @@
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer4.webp" alt="写真：お客様4" width="940" height="705" loading="lazy" decoding="async">
         </figure>
       </div>
-      <div class="p-customer__letters js-in-view fade-in-up">
-        <figure class="p-customer__letter">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer5.webp" alt="写真：お客様5" width="427" height="240" loading="lazy" decoding="async">
-        </figure>
-        <figure class="p-customer__letter">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer6.webp" alt="写真：お客様6" width="427" height="240" loading="lazy" decoding="async">
-        </figure>
-        <figure class="p-customer__letter">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer7.webp" alt="写真：お客様7" width="427" height="240" loading="lazy" decoding="async">
-        </figure>
-      </div>
+    </div>
+    <div class="p-customer__letters js-in-view fade-in-up">
+      <figure class="p-customer__letter">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer5.webp" alt="写真：お客様5" width="427" height="240" loading="lazy" decoding="async">
+      </figure>
+      <figure class="p-customer__letter">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer6.webp" alt="写真：お客様6" width="427" height="240" loading="lazy" decoding="async">
+      </figure>
+      <figure class="p-customer__letter">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer7.webp" alt="写真：お客様7" width="427" height="240" loading="lazy" decoding="async">
+      </figure>
+    </div>
+    <div class="l-inner p-customer__inner">
       <div class="p-customerOrigin js-in-view fade-in-up">
         <h2 class="p-customerOrigin__head">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/deco-customer.webp" alt="アイコン：地球" width="25" height="25" loading="lazy" decoding="async">
