@@ -105,7 +105,7 @@
       </div>
     </div>
   </section>
-  <section class="p-price js-in-view fade-in-up">
+  <section id="price" class="p-price js-in-view fade-in-up">
     <div class="p-price__inner l-inner">
       <h2 class="p-price__title c-title js-in-view fade-in-up">初回教習&nbsp<span class="p-price__title--accent">4,500円！</span></h2>
       <div class="p-price__contents p-contents">
@@ -419,5 +419,15 @@
     </div>
   </section>
   <hr class="c-border js-in-view fade-in-up" />
+  <section class="p-contact js-in-view fade-in-up">
+    <div class="l-inner p-contact__inner">
+      <h2 class="p-contact__title">お問い合わせ</h2>
+      <div class="p-contact__contents">
+        <p class="p-contact__text">ご不明点・ご質問がございましたらお気軽にお問い合わせください</p>
+        <?php echo do_shortcode('[contact-form-7 id="1eb38fe" title="お問い合わせフォーム"]'); ?>
+        <p class="p-contact__text">利用規約・プライバシーポリシーをお読みの上、同意して送信して下さい。</p>
+      </div>
+    </div>
+  </section>
 </main>
 <?php get_footer(); ?>

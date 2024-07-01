@@ -1,0 +1,70 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.wpcf7-form{
+  margin-block: rem(40) rem(10);
+
+}
+
+.wpcf7-form-control-wrap {
+
+}
+
+.wpcf7-form-control {
+  width: 100%;
+  font-size: 1rem;
+
+  &[type="text"],&[type="email"] {
+    border-bottom: 1px solid #bbb;
+  }
+  &::placeholder {
+    color: #aaa;
+  }
+
+  &.wpcf7-select{
+    width: fit-content;
+    border: 1px solid #ccc;
+    padding: rem(7) 1rem rem(4);
+    color: #000;
+  }
+}
+
+.wpcf7-text {
+  padding: 0.5rem;
+}
+
+.wpcf7-email {
+  padding: 0.5rem;
+}
+
+.wpcf7-validates-as-email {
+
+}
+
+.wpcf7-checkbox {
+
+}
+
+.wpcf7-list-item {
+  &.first{
+    margin: 0;
+  }
+}
+
+.wpcf7-list-item-label {
+
+}
+
+.wpcf7-radio {
+
+}
+
+.wpcf7-select {
+
+}
+
+.wpcf7-textarea {
+  border: 1px solid #ccc;
+  height: rem(92);
+}

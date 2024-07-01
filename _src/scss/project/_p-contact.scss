@@ -1,0 +1,87 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-contact {
+  padding-block: 2.5rem;
+}
+
+.p-contact__inner {
+
+}
+
+.p-contact__title {
+  font-size: 1.25rem;
+  @include fz_clamp(1.25, 1.75);
+  line-height: math.div(41.6, 32);
+  text-align: center;
+}
+
+.p-contact__contents {
+  margin-top: 1.25rem;
+  padding-inline: rem(10);
+  width: min(rem(680),100%);
+  margin-inline: auto;
+  background-color: #fff;
+}
+
+.p-contact__text {
+  color: var(--color-main);
+  font-size: 0.875rem;
+}
+
+.p-contact__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.p-contact__item {
+  display: flex;
+  color: var(--color-main);
+  flex-direction: column;
+  gap: rem(4);
+}
+
+.p-contact__label {
+  font-size: rem(14);
+  display: flex;
+  align-items: center;
+  gap: rem(5);
+  line-height: math.div(17.2, 14);
+
+}
+
+.p-contact__require {
+  background-color: #e31f1f;
+  color: var(--color-text2);
+  border-radius: 3px;
+  padding: rem(2) rem(3);
+}
+
+.p-contact__input {
+
+}
+
+.p-contact__submit {
+  margin-top: 1.25rem;
+  input{
+    background-color: rgb(157, 210, 25);
+    padding: rem(13);
+    width: min(rem(100),100%);
+    margin-inline: auto;
+    transition: opacity var(--ease-time) var(--ease-type) 0s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text2);
+    @include hover(){
+      opacity: 0.7;
+    }
+
+    @include mq(){
+      font-size: 1.125rem;
+    }
+  }
+}
+

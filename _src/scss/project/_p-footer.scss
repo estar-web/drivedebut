@@ -1,0 +1,18 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-footer{
+  background-color: #FCEE00;
+  padding-block: rem(60);
+}
+
+.p-footer__inner {
+  text-align: center;
+}
+
+.p-footer__copyright {
+  color: #a1d0e6;
+  font-size: 0.875rem;
+}
+
