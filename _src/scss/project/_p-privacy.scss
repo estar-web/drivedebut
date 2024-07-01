@@ -1,0 +1,64 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-privacy {
+  padding: 0 rem(10) rem(14);
+  color: var(--color-main);
+}
+
+.p-privacy__inner {
+  font-size: 0.875rem;
+  line-height: math.div(22.4, 14);
+  width: min(100%,rem(700));
+  margin-inline: auto;
+}
+
+.p-privacy__rule {
+  display: flex;
+  flex-direction: column;
+  gap: rem(50);
+}
+
+.p-privacy__title {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.p-privacy__text {
+  &[data-position="right"]{
+    text-align: right;
+  }
+}
+
+.p-privacy__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.p-privacy__head {}
+
+.p-privacy__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.p-privacy__listItem {}
+
+.p-privacy__policy {
+  margin-top: rem(60);
+  display: flex;
+  flex-direction: column;
+  gap: rem(50);
+}
+
+.p-privacy__desc {
+  margin-top: 2.5rem;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
