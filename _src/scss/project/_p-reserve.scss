@@ -47,6 +47,8 @@
   span {
     &[data-list="marker"] {
       background-color: #75f0ac;
+      line-height: 1;
+      display: inline-block;
     }
   }
 
