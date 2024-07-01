@@ -264,17 +264,19 @@
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer4.webp" alt="写真：お客様4" width="940" height="705" loading="lazy" decoding="async">
         </figure>
       </div>
-      <div class="p-customer__letters js-in-view fade-in-up">
-        <figure class="p-customer__letter">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer5.webp" alt="写真：お客様5" width="427" height="240" loading="lazy" decoding="async">
-        </figure>
-        <figure class="p-customer__letter">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer6.webp" alt="写真：お客様6" width="427" height="240" loading="lazy" decoding="async">
-        </figure>
-        <figure class="p-customer__letter">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer7.webp" alt="写真：お客様7" width="427" height="240" loading="lazy" decoding="async">
-        </figure>
-      </div>
+    </div>
+    <div class="p-customer__letters js-in-view fade-in-up">
+      <figure class="p-customer__letter">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer5.webp" alt="写真：お客様5" width="427" height="240" loading="lazy" decoding="async">
+      </figure>
+      <figure class="p-customer__letter">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer6.webp" alt="写真：お客様6" width="427" height="240" loading="lazy" decoding="async">
+      </figure>
+      <figure class="p-customer__letter">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/picture-customer7.webp" alt="写真：お客様7" width="427" height="240" loading="lazy" decoding="async">
+      </figure>
+    </div>
+    <div class="l-inner p-customer__inner">
       <div class="p-customerOrigin js-in-view fade-in-up">
         <h2 class="p-customerOrigin__head">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/deco-customer.webp" alt="アイコン：地球" width="25" height="25" loading="lazy" decoding="async">
@@ -359,5 +361,63 @@
       </div>
     </div>
   </section>
+  <section class="p-reserve">
+    <div class="l-inner p-reserve__inner">
+      <div class="p-reserve__announce js-in-view fade-in-up">
+        <h2 class="p-reserve__title">ご予約</h2>
+        <div class="p-reserve__contents">
+          <ul class="p-reserve__list">
+            <li class="p-reserve__item">ご予約は<span class="p-reserve__item--accent">ネット予約</span>が便利です。下のボタンからお進み下さい。</li>
+            <li class="p-reserve__item"><span class="p-reserve__item--accent">お電話でのご予約</span>も受け付けております。ただし教習中などでお電話に出られない場合もございます。その際は留守番電話にお名前とお電話番号をお願いします。後ほどご連絡差し上げます。</li>
+            <li class="p-reserve__item" data-list="strong">初回教習は、<span class="p-reserve__item--accent" data-list="marker">①9:00～ ②11:00～ ③13:00～ ④15:00～ ⑤17:00～</span>です。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="p-reserve__info js-in-view fade-in-up">
+        <div class="p-reserve__body">
+          <div class="p-reserve__tel">
+            <svg id="レイヤー_1" class="p-reserve__icon" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #666;
+                  }
+
+                  .cls-2 {
+                    fill: #e6e6e6;
+                  }
+
+                  .cls-3 {
+                    fill: none;
+                    stroke: #666;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 2.16px;
+                  }
+                </style>
+              </defs>
+              <title>ic_tel</title>
+              <path class="cls-1" d="M2.5,2.67H31.94A2.1,2.1,0,0,1,34,4.77V55.23a2.1,2.1,0,0,1-2.1,2.1H2.5a2.1,2.1,0,0,1-2.1-2.1V4.77A2.1,2.1,0,0,1,2.5,2.67ZM13,6.87h0a.63.63,0,0,0,.63.63H20.8a.63.63,0,0,0,.63-.63h0a.63.63,0,0,0-.63-.63H13.65A.63.63,0,0,0,13,6.87Zm1.05,46.26A3.15,3.15,0,1,0,17.22,50,3.15,3.15,0,0,0,14.07,53.13Z" />
+              <rect id="path-3" class="cls-2" x="4.61" y="11.08" width="25.23" height="37.85" rx="0.42" ry="0.42" />
+              <path class="cls-3" d="M39.42,33.74a5.29,5.29,0,0,0,0-7.48" />
+              <path class="cls-3" d="M46.26,37.48a10.58,10.58,0,0,0,0-15" />
+              <path class="cls-3" d="M52.32,45a21.16,21.16,0,0,0,0-29.93" />
+            </svg>
+            <div class="p-reserve__text">
+              <p>電話でお問い合わせ・予約</p>
+              <a href="tel:080-2165-8576">080-2165-8576</a>
+            </div>
+          </div>
+        </div>
+        <div class="p-reserve__btn">
+          <a href="" class="p-reserve__link" target="_blank">便利なネット予約はコチラ</a>
+        </div>
+      </div>
+      <div class="p-reservePrivacy js-in-view fade-in-up">
+        <a href="<?php echo esc_url(home_url('/privacy-policy')); ?>" class="p-reservePrivacy__link">利用規約・プライバシーポリシー</a>
+      </div>
+    </div>
+  </section>
+  <hr class="c-border js-in-view fade-in-up" />
 </main>
 <?php get_footer(); ?>

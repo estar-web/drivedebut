@@ -28,7 +28,7 @@
 </head>
 
 <body>
-  <header id="header" class="l-header p-header" data-fixed="false">
+  <header id="header" class="l-header p-header">
     <div class="p-header__inner l-inner">
       <h1 class="p-headerLogo">
         <a href="<?php echo esc_url(home_url('/')); ?>" class="p-headerLogo__link">

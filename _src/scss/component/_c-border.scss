@@ -1,0 +1,7 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.c-border{
+  border-top: 4px double #FCEE00;
+}

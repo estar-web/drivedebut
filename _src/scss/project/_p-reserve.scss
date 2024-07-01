@@ -1,0 +1,142 @@
+@use "../global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-reserve {
+  margin-top: 1.25rem;
+  padding-block: 1.25rem 5rem;
+}
+
+.p-reserve__announce {
+  background: transparent url(../images/bg-reserve.webp) no-repeat center center / cover;
+  padding-bottom: 2.5rem;
+
+  @include mq(){
+    padding-block: 2.5rem 1.25rem;
+  }
+}
+
+.p-reserve__inner {}
+
+.p-reserve__title {
+  font-size: 2rem;
+  line-height: math.div(41.6, 32);
+  text-align: center;
+}
+
+.p-reserve__contents {
+  margin-top: 1.25rem;
+  width: min(100%,rem(700));
+  margin-inline: auto;
+}
+
+.p-reserve__list {
+  font-size: 0.875rem;
+  padding-left: 1.25rem;
+  list-style-type: disc;
+}
+
+.p-reserve__item {
+  color: var(--color-main);
+  line-height: math.div(22.4, 14);
+
+  &[data-list="strong"] {
+    font-size: 1.25rem;
+  }
+
+  span {
+    &[data-list="marker"] {
+      background-color: #75f0ac;
+      line-height: 1;
+      display: inline-block;
+    }
+  }
+
+  @include mq(){
+    font-size: 1.25rem;
+  }
+}
+
+.p-reserve__item--accent {
+  color: var(--color-accent);
+}
+
+.p-reserve__info {
+  background-color: #FCEE00;
+  border-radius: 10px;
+  padding: 1.25rem;
+  width: min(100%,rem(940));
+  margin-inline: auto;
+
+  @include mq(){
+    margin-top: 2.5rem;
+  }
+}
+
+.p-reserve__body {
+}
+
+.p-reserve__tel {
+  padding-inline: 1.25rem;
+  padding-top: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #fff;
+  border-radius: 10px 10px 0 0;
+  gap: 1.25rem;
+
+  @include mq(){
+    justify-content: center;
+  }
+}
+
+.p-reserve__icon{
+  width: rem(29);
+  aspect-ratio: 29 / 38;
+
+  @include mq(){
+    width: rem(54);
+    aspect-ratio: 1;
+  }
+}
+
+.p-reserve__text {
+  color: var(--color-main);
+  p{
+    font-size: 0.875rem;
+    line-height: math.div(22.4,14);
+  }
+  a{
+    color: #0000ee;
+    font-size: rem(22);
+    line-height: math.div(35.2, 22);
+    font-weight: 700;
+  }
+}
+
+.p-reserve__btn {
+  background-color: rgb(246, 246, 246);
+  padding: rem(10) rem(20) rem(20) rem(20);
+}
+
+.p-reserve__link {
+  background-color: rgb(157, 210, 25);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0.2) 50%, transparent 100%);
+  border-right: 1px solid #aaa;
+  font-size: 1.25rem;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text2);
+  transition: opacity var(--ease-time) var(--ease-type) 0s;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+  text-shadow: -1px -1px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+
+
+  @include hover(){
+    opacity: 0.7;
+  }
+}
