@@ -40,4 +40,12 @@
   width: 100vw;
 }
 
-.p-customer__letter {}
+.p-customer__letter {
+  flex-basis: 33.33333%;
+  aspect-ratio: 427 / 240;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

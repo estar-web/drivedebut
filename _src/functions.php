@@ -108,7 +108,7 @@ function my_meta_ogp() {
        $ps_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
        $ogp_img = $ps_thumb[0];
     } else {
-     $ogp_img = home_url().'/assets/images/common/ogp_default.jpg';
+     $ogp_img = get_template_directory_uri() .'/assets/images/ogp.webp';
     }
 
     //出力するOGPタグをまとめる
@@ -133,7 +133,6 @@ function my_meta_ogp() {
 add_action('wp_head','my_meta_ogp');//headにOGPを出力
 
 add_action('wp_head', 'add_wp_head');
-
 function add_wp_head() {
   /* favicon */
   echo '<link rel="shortcut icon" href="' . get_template_directory_uri() . '/assets/images/favicon.ico" type="image/x-icon" />' . "\n";
@@ -145,7 +144,6 @@ function add_wp_head() {
 
 
 add_action( 'after_setup_theme', 'my_setup' );
-
 function my_setup() {
     load_theme_textdomain( 'blankslate', get_template_directory() . '/languages' );
     add_theme_support( 'title-tag' );
@@ -156,13 +154,13 @@ function my_setup() {
 
 
 add_filter( 'document_title_separator', 'my_document_title_separator' );
-
 function my_document_title_separator( $sep ) {
     $sep = '|';
     return $sep;
 }
-add_filter( 'the_title', 'my_title' );
 
+
+add_filter( 'the_title', 'my_title' );
 function my_title( $title ) {
     if ( $title == '' ) {
         return '...';

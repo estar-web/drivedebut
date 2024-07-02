@@ -107,10 +107,10 @@
   </section>
   <section id="price" class="p-price js-in-view fade-in-up">
     <div class="p-price__inner l-inner">
-      <h2 class="p-price__title c-title js-in-view fade-in-up">初回教習&nbsp<span class="p-price__title--accent">4,500円！</span></h2>
+      <h2 class="p-price__title c-title js-in-view fade-in-up">初回教習&nbsp;<span class="p-price__title--accent">4,500円！</span></h2>
       <div class="p-price__contents p-contents">
         <div class="p-price__desc js-in-view fade-in-up">
-          <h3 class="p-price__lead">お試し価格&emsp;<span class="p-price__lead--accent">4,500円</span>&nbsp<span class="p-price__title--small">（税込）</h3>
+          <h3 class="p-price__lead">お試し価格&emsp;<span class="p-price__lead--accent">4,500円</span>&nbsp;<span class="p-price__title--small">（税込）</span></h3>
           <ul class="p-price_list">
             <li class="p-price__item">初回教習は<span class="p-price__item--accent">1.5時間</span>。東武東上線<span class="p-price__item--accent">鶴ヶ島駅</span>で待ち合わせ。</li>
             <li class="p-price__item">待ち合わせ時刻は　①9:00～②11:00～③13:00～④15:00～⑤17:00～</li>
@@ -146,7 +146,7 @@
             [
               'head' => 'いよいよ教習スタート！',
               'img' => 'picture-flow2.webp',
-              'text' => '&emsp;初回は教習車での講習です。<br><br>&emsp;東武東上線鶴ヶ島駅改札出口でお待ちしております。目印は黄色の名札です。'
+              'text' => '&emsp;初回は教習車での講習です。<br><br>&emsp;自動車教習所では教わらない装置の説明や基本操作の確認、その後実際の走行を行います。'
             ],
             [
               'head' => '次回に向けてカウンセリング',
@@ -225,10 +225,10 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3230.4099652787604!2d139.4211490772867!3d35.93693987250597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018d7168086c603%3A0xb04638166d5063e6!2z6ba044O25bO26aeF!5e0!3m2!1sja!2sjp!4v1719241799872!5m2!1sja!2sjp" width="355" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="p-flowBenefit js-in-view fade-in-up">
-          <h3 class="p-flowBenefit__head">
+          <div class="p-flowBenefit__head">
             <p class="p-flowBenefit__head--sub">お客様特典</p>
             <p class="p-Benefit__head--main"><span>困ったときのアフターフォロー</span></p>
-          </h3>
+          </div>
           <p class="p-flowBenefit__text">
             &emsp;教習を終えておひとりで運転していると色々疑問やお困りごとがでてくるのではないでしょうか。<br>
             <br>
@@ -278,10 +278,10 @@
     </div>
     <div class="l-inner p-customer__inner">
       <div class="p-customerOrigin js-in-view fade-in-up">
-        <h2 class="p-customerOrigin__head">
+        <div class="p-customerOrigin__head">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/deco-customer.webp" alt="アイコン：地球" width="25" height="25" loading="lazy" decoding="async">
           <p>おかげさまでたくさんのお客様にご利用いただいています</p>
-        </h2>
+        </div>
         <div class="p-customerOrigin__body">
           <?php $fields = CFS()->get('origin');
           foreach ($fields as $field) :
@@ -410,11 +410,11 @@
           </div>
         </div>
         <div class="p-reserve__btn">
-          <a href="" class="p-reserve__link" target="_blank">便利なネット予約はコチラ</a>
+          <a href="https://reserva.be/drivedebut" class="p-reserve__link" target="_blank">便利なネット予約はコチラ</a>
         </div>
       </div>
       <div class="p-reservePrivacy js-in-view fade-in-up">
-        <a href="<?php echo esc_url(home_url('/privacy-policy')); ?>" class="p-reservePrivacy__link">利用規約・プライバシーポリシー</a>
+        <a href="<?php echo esc_url(home_url('/privacy-policy')); ?>" class="p-reservePrivacy__link" target="_blank">利用規約・プライバシーポリシー</a>
       </div>
     </div>
   </section>

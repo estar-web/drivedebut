@@ -15,7 +15,7 @@
   width: 100%;
   font-size: 1rem;
 
-  &[type="text"],&[type="email"] {
+  &[type="text"],&[type="email"],&[type="tel"] {
     border-bottom: 1px solid #bbb;
   }
   &::placeholder {
@@ -67,4 +67,9 @@
 .wpcf7-textarea {
   border: 1px solid #ccc;
   height: rem(92);
+}
+
+.wpcf7-response-output{
+  text-align: center;
+  padding: 1.25rem;
 }
