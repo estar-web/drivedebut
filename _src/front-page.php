@@ -107,15 +107,34 @@
   </section>
   <section id="price" class="p-price js-in-view fade-in-up">
     <div class="p-price__inner l-inner">
-      <h2 class="p-price__title c-title js-in-view fade-in-up">初回教習&nbsp;<span class="p-price__title--accent">4,500円！</span></h2>
+      <h2 class="p-price__title c-title js-in-view fade-in-up">教習料金</h2>
       <div class="p-price__contents p-contents">
         <div class="p-price__desc js-in-view fade-in-up">
+          <p class="p-price__head"><span data-head="first">初回教習</span></p>
           <h3 class="p-price__lead">お試し価格&emsp;<span class="p-price__lead--accent">4,500円</span>&nbsp;<span class="p-price__title--small">（税込）</span></h3>
           <ul class="p-price_list">
             <li class="p-price__item">初回教習は<span class="p-price__item--accent">1.5時間</span>。東武東上線<span class="p-price__item--accent">鶴ヶ島駅</span>で待ち合わせ。</li>
-            <li class="p-price__item">待ち合わせ時刻は　①9:00～②11:00～③13:00～④15:00～⑤17:00～</li>
+            <li class="p-price__item">待ち合わせ時刻は&emsp;①9:00～②11:30～③14:00～④16:30～</li>
             <li class="p-price__item">教習車で自動車の装置の説明を受けてから、いざ運転！</li>
             <li class="p-price__item">お一人一回限り。</li>
+          </ul>
+        </div>
+        <div class="p-price__desc js-in-view fade-in-up">
+          <p class="p-price__head"><span data-head="trip">出張教習コース</span></p>
+          <h3 class="p-price__lead">3時間&emsp;<span class="p-price__lead--accent">4,500円</span>&nbsp;<span class="p-price__title--small">（税込）</span></h3>
+          <ul class="p-price_list">
+            <li class="p-price__item">こちらのコースは初回教習を終え<span class="p-price__item--second">2回目以降</span>の方が対象です。</li>
+            <li class="p-price__item">お客様のご自宅など<span class="p-price__item--line">ご希望の場所</span>で待ち合わせ。</li>
+            <li class="p-price__item"><span class="p-price__item--line">お客様自身のお車</span>でも教習車でもOK、<span class="p-price__item--line">オーダーメイドの内容</span>で教習ができます。</li>
+          </ul>
+        </div>
+        <div class="p-price__desc js-in-view fade-in-up">
+          <p class="p-price__head"><span data-head="learner">鶴ヶ島駅発教習車コース</span></p>
+          <h3 class="p-price__lead">2時間&emsp;<span class="p-price__lead--accent">4,500円</span>&nbsp;<span class="p-price__title--small">（税込）</span></h3>
+          <ul class="p-price_list">
+            <li class="p-price__item">こちらのコースは初回教習を終え<span class="p-price__item--second">2回目以降</span>の方が対象です。</li>
+            <li class="p-price__item">東武東上線<span class="p-price__item--line">鶴ヶ島駅</span>で待ち合わせ。</li>
+            <li class="p-price__item"><span class="p-price__item--line">教習車を使用しオーダーメイドの内容</span>で教習ができます。</li>
           </ul>
         </div>
         <div class="p-pricePay js-in-view fade-in-up">
@@ -133,15 +152,15 @@
       <div class="p-flow__contents">
         <video class="p-flow__movie" src="<?php echo get_template_directory_uri(); ?>/assets/images/movie-flow.mp4" controls width="600" height="400"></video>
         <p class="p-flow__time js-in-view fade-in-up">
-          <span class="p-flow__time--label">初回教習（1.5時間）</span>①9:00～ ②11:00～ ③13:00～ ④15:00～ ⑤17:00～
+          <span class="p-flow__time--label">初回教習（1.5時間）</span>①9:00～ ②11:30～ ③14:00～ ④16:30～
         </p>
         <div class="p-flow__wrap js-in-view fade-in-up">
           <?php
           $flow_items = [
             [
-              'head' => '東武東上線　鶴ヶ島駅で待ち合わせ',
+              'head' => '東武東上線&emsp;鶴ヶ島駅で待ち合わせ',
               'img' => 'picture-flow1.webp',
-              'text' => '&emsp;待ち合わせ時間は9:00、11:00、13:00、15:00、17:00から選びご予約下さい。<br><br>&emsp;東武東上線鶴ヶ島駅改札出口でお待ちしております。目印は黄色の名札です。'
+              'text' => '&emsp;待ち合わせ時間は9:00、11:30、14:00、16:30から選びご予約下さい。<br><br>&emsp;東武東上線鶴ヶ島駅改札出口でお待ちしております。目印は黄色の名札です。'
             ],
             [
               'head' => 'いよいよ教習スタート！',
@@ -186,7 +205,7 @@
             [
               'head' => 'インストラクターと待ち合わせ',
               'img' => 'picture-flow4.webp',
-              'text' => '&emsp;　「出張教習コース」の場合はインストラクターがお客様のご自宅などご希望の場所に伺います。<br><br>&emsp;「鶴ヶ島駅発教習車コース」の場合は東武東上線鶴ヶ島駅で待ち合わせです。'
+              'text' => '&emsp;「出張教習コース」の場合はインストラクターがお客様のご自宅などご希望の場所に伺います。<br><br>&emsp;「鶴ヶ島駅発教習車コース」の場合は東武東上線鶴ヶ島駅で待ち合わせです。'
             ],
             [
               'head' => 'さあ、教習スタート！',
@@ -369,7 +388,7 @@
           <ul class="p-reserve__list">
             <li class="p-reserve__item">ご予約は<span class="p-reserve__item--accent">ネット予約</span>が便利です。下のボタンからお進み下さい。</li>
             <li class="p-reserve__item"><span class="p-reserve__item--accent">お電話でのご予約</span>も受け付けております。ただし教習中などでお電話に出られない場合もございます。その際は留守番電話にお名前とお電話番号をお願いします。後ほどご連絡差し上げます。</li>
-            <li class="p-reserve__item" data-list="strong">初回教習は、<span class="p-reserve__item--accent" data-list="marker">①9:00～ ②11:00～ ③13:00～ ④15:00～ ⑤17:00～</span>です。</li>
+            <li class="p-reserve__item" data-list="strong">初回教習は、<span class="p-reserve__item--accent" data-list="marker">①9:00～ ②11:30～ ③14:00～ ④16:30～</span>です。</li>
           </ul>
         </div>
       </div>
