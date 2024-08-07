@@ -121,7 +121,7 @@
         </div>
         <div class="p-price__desc js-in-view fade-in-up">
           <p class="p-price__head"><span data-head="trip">出張教習コース</span></p>
-          <h3 class="p-price__lead">3時間&emsp;<span class="p-price__lead--accent">4,500円</span>&nbsp;<span class="p-price__title--small">（税込）</span></h3>
+          <h3 class="p-price__lead">3時間&emsp;<span class="p-price__lead--accent">2,3000円</span>&nbsp;<span class="p-price__title--small">（税込）</span></h3>
           <ul class="p-price_list">
             <li class="p-price__item">こちらのコースは初回教習を終え<span class="p-price__item--second">2回目以降</span>の方が対象です。</li>
             <li class="p-price__item">お客様のご自宅など<span class="p-price__item--line">ご希望の場所</span>で待ち合わせ。</li>
@@ -130,7 +130,7 @@
         </div>
         <div class="p-price__desc js-in-view fade-in-up">
           <p class="p-price__head"><span data-head="learner">鶴ヶ島駅発教習車コース</span></p>
-          <h3 class="p-price__lead">2時間&emsp;<span class="p-price__lead--accent">4,500円</span>&nbsp;<span class="p-price__title--small">（税込）</span></h3>
+          <h3 class="p-price__lead">2時間&emsp;<span class="p-price__lead--accent">12,000円</span>&nbsp;<span class="p-price__title--small">（税込）</span></h3>
           <ul class="p-price_list">
             <li class="p-price__item">こちらのコースは初回教習を終え<span class="p-price__item--second">2回目以降</span>の方が対象です。</li>
             <li class="p-price__item">東武東上線<span class="p-price__item--line">鶴ヶ島駅</span>で待ち合わせ。</li>
