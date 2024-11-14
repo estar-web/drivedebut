@@ -1,0 +1,22 @@
+@use "global/" as *;
+@use "sass:math";
+@use "sass:map";
+
+.p-pdnavi {
+  padding-block: 1.25rem;
+
+  @include mq(){
+    padding-block: 2.5rem;
+  }
+}
+
+.p-pdnavi__link {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.p-pdnavi__img {
+
+}
+

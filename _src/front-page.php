@@ -448,5 +448,12 @@
       </div>
     </div>
   </section>
+  <div class="p-pdnavi js-in-view fade-in-up">
+    <div class="l-inner">
+        <!-- ▼ paperdriver-navi.com ▼ -->
+        <a class="p-pdnavi__link" href="https://www.paperdriver-navi.com/" target="_blank"><img class="p-pdnavi__img" src="https://book.paperdriver-navi.com/contents/wp-content/uploads/2024/04/banner_1000-220.jpg" alt="ペーパードライバーナビ"></a>
+        <!-- ▲ paperdriver-navi.com ▲ -->
+      </div>
+     </div>
 </main>
 <?php get_footer(); ?>

@@ -155,11 +155,11 @@ const php = (done) => {
  * ローカルサーバー立ち上げ
  */
 const browserSyncFunc = () => {
-  // browserSync.init(browserSyncOption);
+  browserSync.init(browserSyncOption);
 };
 
 const browserSyncOption = {
-  proxy: "http://localhost:10028",
+  proxy: "http://localhost:8881",
 };
 
 
