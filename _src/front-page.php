@@ -117,6 +117,7 @@
             <li class="p-price__item">待ち合わせ時刻は&emsp;①9:00～②11:30～③14:00～④16:30～</li>
             <li class="p-price__item">教習車で自動車の装置の説明を受けてから、いざ運転！</li>
             <li class="p-price__item">お一人一回限り。</li>
+            <li class="p-price__item">日曜日のみの営業です。</li>
           </ul>
         </div>
         <div class="p-price__desc js-in-view fade-in-up">
@@ -126,6 +127,7 @@
             <li class="p-price__item">こちらのコースは初回教習を終え<span class="p-price__item--second">2回目以降</span>の方が対象です。</li>
             <li class="p-price__item">お客様のご自宅など<span class="p-price__item--line">ご希望の場所</span>で待ち合わせ。</li>
             <li class="p-price__item"><span class="p-price__item--line">お客様自身のお車</span>でも教習車でもOK、<span class="p-price__item--line">オーダーメイドの内容</span>で教習ができます。</li>
+            <li class="p-price__item">日曜日のみの営業です。</li>
           </ul>
         </div>
         <div class="p-price__desc js-in-view fade-in-up">
@@ -135,6 +137,7 @@
             <li class="p-price__item">こちらのコースは初回教習を終え<span class="p-price__item--second">2回目以降</span>の方が対象です。</li>
             <li class="p-price__item">東武東上線<span class="p-price__item--line">鶴ヶ島駅</span>で待ち合わせ。</li>
             <li class="p-price__item"><span class="p-price__item--line">教習車を使用しオーダーメイドの内容</span>で教習ができます。</li>
+            <li class="p-price__item">日曜日のみの営業です。</li>
           </ul>
         </div>
         <div class="p-pricePay js-in-view fade-in-up">
